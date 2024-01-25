@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Online bookstore</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+         <style>
+            .custom-bg {
+                background-color: #6c757d; 
+            }
+    
+            .custom-text-light {
+                color: #f8f9fa; 
+            }
+            .custom-input {
+                background-color: #fff;
+                color: #495057;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem; 
+            }
+    
+            .custom-btn {
+                background-color: #28a745; 
+                border: none;
+                border-radius: 0.25rem; 
+            }
+        </style>
+        <style>
+            .header-section {
+                background-color: #f8f8f8;
+                border-bottom: 1px solid #ddd;
+            }
+            .header-logo {
+                height: 50px; 
+            }
+            .nav-link {
+                color: #333; 
+            }
+            .search-box {
+                width: 100%;
+                border: 1px solid #ddd;
+                padding: 0.375rem 0.75rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header-section">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="imgs/1234567.jpg" alt="Logo" class="header-logo">
+                        </a>
+                        Welcome to Online BookStore
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            </ul>
+                            
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Online BookStore</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">My Account</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Wish List</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">My Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section class="p-5 custom-bg custom-text-light">
+            <div class="container">
+                <div class="d-md-flex justify-content-between align-items-center">
+                    <h3 class="mb-3">Search for books</h3>
+                    <div class="input-group news-input">
+                        <input
+                            type="text"
+                            id="bookSearchInput"
+                            class="form-control custom-input"
+                            placeholder="Please type the book's name here"
+                        />
+                        <button class="btn btn-lg custom-btn" onclick="searchBooks()">Search</button>
+                    </div>
+                </div>
+                <div id="searchResults"></div>
+            </div>
+        </section>
+        
+        
+        <section class="p-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md">
+                        <div class="card bg-dark text-light">
+                            <div class="card-body text-center">
+                                <div class="card-title">Today's Offer</div>
+                                <div class="card-text">
+                                    Daily update discount items.
+                                    Click to get more imformation about today's offer.
+                                    You might some books you want here.We always prepare good staff for you.
+                                </div>
+                                <a href="https://www.amazon.co.uk/events/deals" class="btn btn-primary mt-2"
+                                    >Take me there</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card bg-secondary text-light">
+                            <div class="card-body text-center">
+                                <div class="card-title">Shop offline
+                                </div>
+                                <div class="card-text">
+                                    We have a number of offline shops, so if you prefer the shopping atmosphere of an offline bookshop, you can come and shop at offline bookshops across the UK.
+                                </div>
+                                <a href="https://www.google.com/maps" class="btn btn-dark mt-2"
+                                    >show on the map</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md">
+                        <div class="card bg-dark text-light">
+                            <div class="card-body text-center">
+                                <div class="card-title">Classic Book Recommendations</div>
+                                <div class="card-text">
+                                    We recommend classic reads from around the world
+                                    Those books from all over the world
+                                    Click the button below to get more of our recommendations!
+                                </div>
+                                <a href="#" class="btn btn-primary mt-2"
+                                    >Get more imformation</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md">
+                        <img src="imgs/1234.jpg" alt="harry Potter" class="img-fluid" />
+                    </div>
+                    <div class="col-md p-5">
+                        <h2>Harry Potter</h2>
+                        <p class="lead">
+                            The Harry Potter series is based on the co-existence of the modern world and the wizarding world, starting with the murder of Harry Potter's parents, Jaime and Lily Potter, by the infamous wizard Voldemort, and the survival of Harry Potter as a baby, and following the events of Harry's formative years in the modern world and the wizarding world respectively.
+                        </p>
+                        <p>
+                            Harry Potter (English: Harry Potter), a fantasy literary series of novels by British author J. K. Rowling, depicting the adventures of the protagonist Harry Potter during his seven years of study at Hogwarts School of Witchcraft and Wizardry. Published in over 200 countries and available in 80 languages, the series totalled over 500 million sales in 2018, making it the world's best-selling novel.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Harry_Potter" class="btn btn-light">Take me there </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5 bg-dark text-light">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md p-5">
+                        <h2>Norwegian Wood</h2>
+                        <p class="lead">
+                            Norwegian Wood is a 1987 realistic novel by Japanese author Haruki Murakami, the fifth full-length book by Haruki Murakami. The Philadelphia City Paper in the United States described the novel as a nostalgic tale of loss and burgeoning sexuality. The novel is told from Toru Watanabe's first-person point of view about his own university life in Tokyo in the past. The waistband cover of the original Japanese physical book reads: a masterful, poignant depiction of endless loss and regeneration, one of the most stirring 100 per cent romance novels of our time.
+
+In 2010, it was adapted into a film of the same name by director Hero Chen.
+                        </p>
+                        <p>
+                            In 1987, Toru Watanabe, the 37-year-old protagonist and narrator, arrives at Hamburg Airport in Germany by plane. Upon landing, he hears the soundtrack of the Beatles' "Norwegian Wood" playing in the background, and remembers a woman who died 18 years ago.
+
+The protagonist is entangled in a journey of self-growth between Naoko, who is emotionally unstable and mentally ill, and Midori Kobayashi, who is cheerful and lively. The story ends with Naoko committing suicide, and Watanabe starting over with Midori with a hint of sadness. There are multiple love triangles in the story, and the novel depicts the struggles of young people in their relationships, revealing a sense of confusion. Set in the late 1960s, when strikes at Japanese universities were frequent, the novel portrays the hypocrisy and weakness of the people of the time, reflecting the student agitation under the youth movement.
+
+In one passage of the novel, which describes the daily corruption within the leadership of the Japanese student movement, Haruki Murakami writes, "I think the real enemy of this group is not really the power of the state, but the lack of imagination."
+                        </p>
+                        <a href="https://ja.wikipedia.org/wiki/%E3%83%8E%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A4%E3%81%AE%E6%A3%AE" class="btn btn-light">Take me there</a>
+                    </div>
+
+                    <div class="col-md">
+                        <p class="lead">
+                            <img src="imgs/12345.jpg" alt="Norwegian Wood" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="container">
+                <h2 class="text-center">About Us</h2>
+                <div
+                    class="accordion accordion-flush"
+                    id="accordionFlushExample"
+                >
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseOne"
+                            >
+                            What's the buying process like
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseOne"
+                            class="accordion-collapse collapse show"
+                            aria-labelledby="flush-headingOne"
+                            data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body">
+                                After selecting your favourite books in the website, add them to the shopping cart and place your order, you can pay by the balance of the value-added membership card (with a 10% discount), or you can bind a bank card to pay.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseTwo"
+                            >
+                                When can I get the staff
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo"
+                            data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body">
+                                It depends on the amount of staff you buy,and the address to deliver, We have stocks in London,Manchester and Leeds,It generally takes 3-5 days to deliver. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree"
+                                aria-expanded="false"
+                                aria-controls="flush-collapseThree"
+                            >
+                            Refunds and Returns
+                            </button>
+                        </h2>
+                        <div
+                            id="flush-collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree"
+                            data-bs-parent="#accordionFlushExample"
+                        >
+                            <div class="accordion-body">
+                                We promise that the quality of the goods we send will not be a problem, if there is a problem with the goods, we provide free return service or full refund service, for seven days unopened brand new goods we also provide return service, please note that we do not provide shipping costs, and will take five per cent of the amount of the goods as a service charge.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5 bg-primary">
+            <div class="container">
+                <h2 class="text-center text-light">Why Choose Us</h2>
+                <p class="lead text-center text-white mb-5">
+                    We'll tell you why you should choose us
+                </p>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Diversity</h3>
+                                <p class="card-text">
+                                    We offer you a diverse selection of books, with over 10,000 books from all over the world in a variety of genres to choose from.You will finally Find one you like.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">More people's choices</h3>
+                                <p class="card-text">
+                                    Today our website has over one million registered users, a reassuring choice for customers from all over the world.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Trusted trading model</h3>
+                                <p class="card-text">
+                                    We offer returns and refunds, please see the About Us section above.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card bg-light">
+                            <div class="card-body text-center">
+                                <h3 class="card-title">Donation</h3>
+                                <p class="card-text">
+                                    We have always been committed to charity, a portion of every purchase you make goes to pay the charity, your purchase not only brings you knowledge, but also adds love to the world.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Contact Us</h2>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Phone Number：771234567891</li>
+                    <li class="list-group-item">Email Address： Online bookstore@gmail.com</li>
+                    <li class="list-group-item">Address：GB</li>
+                  </ul>
+            </div>
+        </section>
+
+        <footer class="p-5 bg-dark text-white text-center">
+            <div class="container">
+                <p class="lead">Copyright &copy; 2024 Online BookStore</p>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
+
+ 
+
+
